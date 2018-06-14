@@ -1,0 +1,34 @@
+/*----------------------------------
+  Promo Block v1
+------------------------------------*/
+.u-promo-block {
+  position: relative;
+	min-height: 100vh;
+  @include px-to-rem(padding-top, 100px);
+  @include px-to-rem(padding-bottom, 100px);
+  background: {
+    repeat: no-repeat;
+    position: 50% 0;
+    size: cover;
+  }
+
+  &--mheight-450 {
+    min-height: 450px;
+  }
+
+  &--mheight-500 {
+    min-height: 500px;
+  }
+
+  &--mheight-600 {
+    min-height: 600px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    & {
+      background: {
+        attachment: fixed;
+      }
+    }
+  }
+}

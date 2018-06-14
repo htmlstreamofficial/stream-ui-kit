@@ -1,0 +1,22 @@
+//
+// Dropdown
+//
+
+// The dropdown menu
+.dropdown-menu {
+  min-width: $dropdown-min-width;
+  border: {
+    width: 3px 0 0;
+    color: $primary;
+  }
+  box-shadow: $dropdown-box-shadow;
+}
+
+// Links, buttons, and more within the dropdown menu
+.dropdown-item {
+  &.active,
+  &:active {
+    color: $primary;
+    background-color: transparent;
+  }
+}

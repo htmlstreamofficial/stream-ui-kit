@@ -1,0 +1,269 @@
+//
+// Custom Bootstrap SASS
+//
+
+
+
+// Links
+// ====================================================
+
+$link-hover-decoration:																 $g-link-hover-decoration !default;
+
+
+
+// Color System
+// ====================================================
+
+$primary:                                              $g-primary !default;
+$secondary:                                            $g-secondary !default;
+$success:                                              $g-green !default;
+$info:                                                 $g-blue !default;
+$warning:                                              $g-yellow !default;
+$danger:                                               $g-red !default;
+$light:                                                $g-light !default;
+$dark:                                                 $g-dark !default;
+
+
+
+// Border Radius
+// ====================================================
+
+$border-radius:                                        $g-border-radius !default;
+
+
+
+// Text Muted
+// ====================================================
+
+$text-muted:                                           $g-text-muted !default;
+
+
+
+// Spacing
+// ====================================================
+
+// stylelint-disable
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 2),
+  6: ($spacer * 2.5),
+  7: ($spacer * 3),
+  8: ($spacer * 3.5),
+  9: ($spacer * 4)
+), $spacers);
+
+
+
+
+// Width and Height
+// ====================================================
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+$sizes: map-merge((
+  25: 25%,
+  30: 30%,
+  50: 50%,
+  60: 60%,
+  75: 75%,
+  100: 100%
+), $sizes);
+// stylelint-enable
+
+
+
+// Image Thumbnails
+// ====================================================
+
+$thumbnail-border-color:                               $g-thumbnail-border-color !default;
+
+
+
+// Pagination
+// ====================================================
+
+// Border
+$pagination-border-color:                              $g-pagination-border-color !default;
+
+// Hover
+$pagination-hover-color:                               $g-pagination-hover-color !default;
+$pagination-hover-bg:                                  $g-pagination-hover-bg !default;
+$pagination-hover-border-color:                        $g-pagination-hover-border-color !default;
+
+// Active
+$pagination-active-color:                              $g-pagination-active-color !default;
+$pagination-active-bg:                                 $g-pagination-active-bg !default;
+$pagination-active-border-color:                       $g-pagination-active-border-color !default;
+
+
+
+// Buttons + Forms
+// ====================================================
+
+// Default Spacing
+$input-btn-padding-y:                                  $g-input-btn-padding-y !default;
+$input-btn-padding-x:                                  $g-input-btn-padding-x !default;
+
+// Large Spacing
+$input-btn-padding-y-lg:                               $g-input-btn-padding-y-lg !default;
+$input-btn-padding-x-lg:                               $g-input-btn-padding-x-lg !default;
+
+// Focus Width
+$input-btn-focus-width:                                $g-input-btn-focus-width !default;
+
+
+
+// Forms Inputs
+// ====================================================
+
+// Colors
+$input-color:                                          $g-input-color !default;
+$input-group-addon-color:                              $g-input-group-addon-color !default;
+
+// Border Colors
+$input-border-color:                                   $g-input-border-color !default;
+$input-focus-border-color:                             $g-input-focus-border-color;
+
+// Background Colors
+$input-group-addon-bg:                                 $g-input-group-addon-bg !default;
+
+// Focus Colors
+$input-focus-color:                                    $g-input-focus-color !default;
+$input-placeholder-color:                              $g-input-placeholder-color !default;
+
+// Box Focus Shadow
+$input-focus-box-shadow:                               $g-input-focus-box-shadow !default;
+
+
+
+// Close
+// ====================================================
+
+$close-font-size:                                      $g-close-font-size !default;
+$close-font-weight:                                    $g-close-font-weight !default;
+$close-color:                                          $g-dark !default;
+$close-text-shadow:                                    $g-close-text-shadow !default;
+
+
+
+// Alerts
+// ====================================================
+
+$alert-padding-y:                                      $g-alert-padding-y !default;
+$alert-padding-x:                                      $g-alert-padding-x !default;
+
+
+
+// Progress Bars
+// ====================================================
+
+$progress-bg:                                          $g-progress-bg !default;
+
+
+
+// List Groups
+// ====================================================
+
+$list-group-border-color:                              $g-list-group-border-color !default;
+$list-group-hover-bg:                                  $g-list-group-hover-bg !default;
+
+
+// Blockquote
+// ====================================================
+$blockquote-small-color:                               $g-blockquote-small-color !default;
+$blockquote-font-size:                                 $g-blockquote-font-size !default;
+
+
+
+// Card
+// ====================================================
+
+$card-cap-bg:                                          $g-card-cap-bg !default;
+$card-border-color:                                    $g-card-border-color !default;
+
+
+
+// Modals
+// ====================================================
+
+// Background Color
+$modal-backdrop-bg:                                     $g-modal-backdrop-bg !default;
+$modal-backdrop-opacity:                                $g-modal-backdrop-opacity !default;
+
+// Border Color
+$modal-content-border-color:                            $g-modal-content-border-color !default;
+
+// Box Shadow
+$modal-content-box-shadow-xs:                           $g-modal-content-box-shadow-xs !default;
+$modal-content-box-shadow-sm-up:                        $g-modal-content-box-shadow-sm-up !default;
+
+// Sizes
+$modal-lg:                                              $g-modal-lg !default;
+$modal-md:                                              $g-modal-md !default;
+$modal-sm:                                              $g-modal-sm !default;
+
+
+
+// Popovers
+// ====================================================
+
+// Background Color
+$popover-header-bg:                                     $g-popover-header-bg !default;
+
+// Border Color
+$popover-border-color:                                  $g-popover-border-color !default;
+
+// Box Shadow
+$popover-box-shadow:                                    $g-popover-box-shadow !default;
+
+
+
+// Navbar
+// ====================================================
+$navbar-dark-color:                                    $g-navbar-dark-color !default;
+
+
+
+// Nav Tabs
+// ====================================================
+
+// Active Color
+$nav-tabs-link-active-color:                           $g-nav-tabs-link-active-color !default;
+
+// Border Color
+$nav-tabs-border-color:                                $g-nav-tabs-border-color !default;
+
+
+
+// Drop Down
+// ====================================================
+
+$dropdown-link-hover-bg:                               $g-dropdown-link-hover-bg !default;
+$dropdown-border-color:                                $g-dropdown-border-color !default;
+$dropdown-min-width:                                   $g-dropdown-min-width !default;
+$dropdown-box-shadow:                                  $g-dropdown-box-shadow !default;
+
+
+
+// Carousel
+// ====================================================
+
+$carousel-control-color:                               $g-carousel-control-color !default;
+
+
+
+// Tooltips
+// ====================================================
+
+$tooltip-max-width:                                    $g-tooltip-max-width !default;
+$tooltip-color:                                        $g-tooltip-color !default;
+$tooltip-bg:                                           $g-tooltip-bg !default;
+$tooltip-opacity:                                      $g-tooltip-opacity !default;
+$tooltip-padding-y:                                    $g-tooltip-padding-y !default;
+$tooltip-padding-x:                                    $g-tooltip-padding-x !default;

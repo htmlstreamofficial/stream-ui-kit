@@ -1,0 +1,83 @@
+/*------------------------------------
+  Portfolio
+------------------------------------*/
+.u-portfolio-controls {
+	&__item {
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	&__item:not(:last-child)::after {
+	    content: "|";
+	    font-size: 0.71429rem;
+	    margin: 0 4px;
+	    position: relative;
+	    top: -2px;
+	    line-height: inherit;
+	    display: inline-block;
+	    vertical-align: middle;
+	    color: transparent;
+	}
+
+	@include media-breakpoint-up(lg) {
+		&__item:not(:last-child)::after {
+			color: $g-gray-150;
+			margin: 0 7px 0 12px;
+		}
+	}
+	a {
+		color: $g-dark;
+		&.active {
+			color: $g-primary;
+		}
+	}
+}
+.u-portfolio {
+	&__item {
+	  overflow: hidden;
+	  z-index: 2;
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+		height: auto;
+		transition: all .2s ease;
+	}
+	&__item:hover &__image {
+	  transform: translate3d(0, -60px, 0);
+	}
+
+	&__info {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 3.75rem;
+		overflow: hidden;
+		@include px-to-rem(padding-left, 15px);
+		@include px-to-rem(padding-right, 15px);
+		@include px-to-rem(padding-top, 5px);
+		@include px-to-rem(padding-bottom, 5px);
+		color: $g-white;
+		background-color: theme-color("primary");
+		transition: all .2s ease;
+		transform: translate3d(0, 3.75rem, 0);
+
+		small {
+			opacity: .7;
+		}
+	}
+	&__item:hover &__info {
+	  transform: translate3d(0, 0, 0);
+	}
+
+	&__zoom {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		text-indent: -10000px;
+	}
+}

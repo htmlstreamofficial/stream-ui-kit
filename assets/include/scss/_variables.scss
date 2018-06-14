@@ -1,0 +1,450 @@
+// ============================================================= //
+// Stream UI Kit Variables                                       //
+// ============================================================= //
+
+// Retreive color Sass maps
+@function theme-color($hs-key: "primary") {
+  @return map-get($g-theme-colors, $hs-key);
+}
+
+@function accent-color($hs-key: "accent") {
+  @return map-get($g-accent-colors, $hs-key);
+}
+
+$root-path:                                                    "../";
+
+
+
+// Breakpoints
+// =========================================================
+
+$g-breakpoints: (
+  xs:                                                           0,
+  sm:                                                           576px,
+  md:                                                           768px,
+  lg:                                                           992px,
+  xl:                                                           1200px
+) !default;
+
+
+
+// Color System
+// =============================================================
+
+// Main Colors
+$g-white:                                                       #fff !default;
+$g-dark:                                                        #1b1e24 !default;
+$g-transparent:                                                 transparent !default;
+
+// Grays
+$g-gray-50:                                                     #f3f5f9 !default;
+$g-gray-100:                                                    #e6e7e9 !default;
+$g-gray-150:                                                    #d5d7dc !default;
+$g-gray-200:                                                    #8f95a0 !default;
+$g-gray-400:                                                    #8c98a4 !default;
+$g-gray-500:                                                    #828286 !default;
+$g-gray-600:                                                    #5a5f69 !default;
+
+// Light Primary
+$g-light-primary-100:                                           #faf7fc !default;
+$g-light-primary-125:                                           #ede6f2 !default;
+$g-light-primary-200:                                           #85778f !default;
+$g-light-primary-300:                                           #998ba3 !default;
+
+// Light Blues
+$g-color-light-blue-100:                                        #f6f9fc !default;
+$g-color-light-blue-200:                                        #77838f !default;
+$g-color-light-blue-300:                                        #8c98a4 !default;
+
+// Colors
+$g-purple:                                                      #59287a !default;
+$g-cyan:                                                        #00dffc !default;
+$g-teal:                                                        #00c9a7 !default;
+$g-blue:                                                        #2972fa !default;
+$g-green:                                                       #0dd157 !default;
+$g-yellow:                                                      #fab633 !default;
+$g-red:                                                         #fb4143 !default;
+$g-facebook:                                                    #3b5998 !default;
+$g-google:                                                      #d14130 !default;
+$g-twitter:                                                     #1da1f2 !default;
+$g-instagram:                                                   #3f729b !default;
+$g-github:                                                      #24292e !default;
+
+// Accent Colors
+$g-accent-colors: () !default;
+$g-accent-colors: map-merge((
+  "white":                                                      $g-white
+), $g-accent-colors);
+
+// Social Network Colors
+$g-social-network-colors: () !default;
+$g-social-network-colors: map-merge((
+  "facebook":                                                   $g-facebook,
+  "google":                                                     $g-google,
+  "twitter":                                                    $g-twitter,
+  "instagram":                                                  $g-instagram,
+  "github":                                                     $g-github
+), $g-social-network-colors);
+
+// Theme Colors
+$g-primary:                                                     $g-purple !default;
+$g-secondary:                                                   $g-teal !default;
+$g-success:                                                     $g-green !default;
+$g-info:                                                        $g-blue !default;
+$g-warning:                                                     $g-yellow !default;
+$g-danger:                                                      $g-red !default;
+$g-light:                                                       $g-color-light-blue-100 !default;
+
+$g-theme-colors: () !default;
+$g-theme-colors: map-merge((
+  "primary":                                                    $g-primary,
+  "secondary":                                                  $g-secondary,
+  "success":                                                    $g-success,
+  "info":                                                       $g-info,
+  "warning":                                                    $g-warning,
+  "danger":                                                     $g-danger,
+  "light":                                                      $g-light,
+  "dark":                                                       $g-dark
+), $g-theme-colors);
+
+
+// Links (Style anchor elements)
+$g-link-color:                                                  theme-color("primary") !default;
+$g-link-color-hover:                                            darken($g-link-color, 7.5%) !default;
+$g-link-hover-decoration:                                       none !default;
+
+// Text Muted
+$g-text-muted:                                                  $g-gray-200 !default;
+
+// Link Muted
+$g-link-muted-color:                                            $g-light-primary-300 !default;
+$g-link-muted-hover-color:                                      theme-color("primary") !default;
+
+
+
+// Typography
+// =============================================================
+
+// Font Families
+$g-font-primary:                                                "Open Sans", sans-serif !default;
+$g-font-accent:                                                 "Playfair Display", serif !default;
+
+// Font Sizes
+$g-font-size-base:                                              1rem !default;
+
+// Font Weight
+$g-font-weight-light:                                           300 !default;
+$g-font-weight-normal:                                          400 !default;
+$g-font-weight-medium:                                          500 !default;
+$g-font-weight-semi-bold:                                       600 !default;
+$g-font-weight-bold:                                            700 !default;
+
+$g-headings-font-weight:                                        $g-font-weight-light !default;
+$g-headings-line-height:                                        1.5 !default;
+$g-display-lin-height:                                          1.2 !default;
+$g-paragraph-line-height:                                       1.7 !default;
+$g-outline:                                                     5px auto -webkit-focus-ring-color !default;
+$g-display-1:                                                   72px !default;
+$g-display-2:                                                   56px !default;
+$g-display-3:                                                   48px !default;
+$g-hr-color:                                                    $g-gray-100 !default;
+
+
+
+// Content Spacing
+// =============================================================
+
+$g-content-space-y:                                              6.25rem !default
+
+$g-spacer: 1rem !default;
+$g-spacers: () !default;
+$g-spacers: map-merge((
+  0: 0,
+  1: ($g-spacer * .25),
+  2: ($g-spacer * .5),
+  3: $g-spacer,
+  4: ($g-spacer * 1.5),
+  5: ($g-spacer * 2),
+  6: ($g-spacer * 2.5),
+  7: ($g-spacer * 3),
+  8: ($g-spacer * 3.5),
+  9: ($g-spacer * 4)
+), $g-spacers);
+
+
+
+// Box Shadow
+// =============================================================
+
+$g-box-shadow-sm:                                                0 .20rem 1.25rem 0 rgba($g-dark, 0.07) !default
+$g-box-shadow-lg:                                                0 .4rem 2.2rem 0 rgba($g-dark, 0.1) !default
+
+
+
+// Image Thumbnails
+// =============================================================
+
+$g-thumbnail-border-color:                                      $g-gray-100 !default;
+
+
+
+// Pagination
+// =============================================================
+
+// Colors
+$g-pagination-color:                                            $g-secondary !default;
+
+// Border
+$g-pagination-border-color:                                     $g-gray-100 !default;
+
+// Hover
+$g-pagination-hover-color:                                      $g-white !default;
+$g-pagination-hover-bg:                                         theme-color("primary") !default;
+$g-pagination-hover-border-color:                               theme-color("primary") !default;
+
+// Active
+$g-pagination-active-color:                                     $g-white !default;
+$g-pagination-active-bg:                                        theme-color("primary") !default;
+$g-pagination-active-border-color:                              theme-color("primary") !default;
+
+
+
+// Border Radius
+// =============================================================
+
+$g-border-radius:                                               .25rem !default;
+$g-border-radius-pill:                                          6.25rem !default;
+$g-border-radius-circle:                                        50% !default;
+
+
+
+// Buttons + Forms
+// =============================================================
+
+// Default Spacing
+$g-input-btn-padding-y:                                         .5rem !default;
+$g-input-btn-padding-x:                                         .8rem !default;
+
+// Large Spacing
+$g-input-btn-padding-y-lg:                                      .625rem !default;
+$g-input-btn-padding-x-lg:                                      1.2rem !default;
+
+// Focus Width
+$g-input-btn-focus-width:                                       0 !default;
+
+
+
+// Forms Inputs
+// =============================================================
+
+// Color
+$g-input-color:                                                 $g-dark !default;
+$g-input-group-addon-color:                                     $g-gray-200 !default;
+
+// Border Colors
+$g-form-border-color:                                           $g-gray-100 !default;
+$g-input-border-color:                                          $g-gray-100 !default;
+$g-input-focus-border-color:                                    lighten(theme-color("primary"), 30%) !default;
+
+// Background Colors
+$g-input-group-addon-bg:                                        transparent !default;
+
+// Focus Colors
+$g-input-focus-color:                                           $g-dark !default;
+$g-input-placeholder-color:                                     $g-gray-400 !default;
+
+// Box Shadow
+$g-input-focus-box-shadow:                                      none !default;
+
+
+
+// Forms States + Icon
+// =============================================================
+
+// Form Icon
+$g-form-icon-color:                                             $g-gray-200 !default;
+
+// Forms States (e.g. Disabled)
+$g-form-label-color-disabled:                                   $g-text-muted !default;
+$g-custom-control-indicator-disabled-bg:                        $g-gray-150 !default;
+
+
+
+// Form Toggles
+// =============================================================
+
+// Unchecked (Off)
+$g-form-toggle-color:                                            $g-gray-150 !default;
+$g-form-toggle-border-color:                                     $g-gray-150 !default;
+$g-form-toggle-circle-bg-color:                                  $g-gray-150 !default;
+
+// Checked (On)
+$g-form-toggle-color-checked:                                    $g-white !default;
+$g-form-toggle-bg-color-checked:                                 theme-color("primary") !default;
+$g-form-toggle-border-color-checked:                             theme-color("primary") !default;
+$g-form-toggle-circle-bg-color-checked:                          $g-white !default;
+
+// Disabled
+$g-form-toggle-color-disabled:                                   $g-gray-100 !default;
+$g-form-toggle-border-color-disabled:                            $g-gray-100 !default;
+$g-form-toggle-circle-bg-color-disabled:                         $g-gray-100 !default;
+
+// Disabled + Checked (On)
+$g-form-toggle-bg-color-disabled-checked:                        $g-gray-100 !default;
+$g-form-toggle-border-color-disabled-checked:                    $g-gray-100 !default;
+
+
+
+// Close
+// =============================================================
+
+$g-close-font-size:                                              $g-font-size-base * 2 !default;
+$g-close-font-weight:                                            $g-font-weight-light !default;
+$g-close-color:                                                  $g-dark !default;
+$g-close-text-shadow:                                            none !default;
+
+
+
+// Alert
+// =============================================================
+
+// Spacing
+$g-alert-padding-y:                                              1rem !default;
+$g-alert-padding-x:                                              1.25rem !default;
+
+// Border
+$g-alert-border-width:                                           0 !default;
+
+
+
+// Progress Bars
+// =============================================================
+
+$g-progress-bg:                                                 $g-gray-50 !default;
+
+
+
+// List Groups
+// =============================================================
+
+$g-list-group-border-color:                                     $g-gray-100 !default;
+$g-list-group-hover-bg:                                         theme-color("light") !default;
+
+
+
+// Blockquote
+// =============================================================
+
+// Spacing
+$g-blockquote-padding-y:                                        1.5rem !default;
+$g-blockquote-padding-x:                                        1.25rem !default;
+
+// Background Color
+$g-blockquote-bg:                                               theme-color("light") !default;
+
+// Border Color
+$g-blockquote-border-color:                                     theme-color("primary") !default;
+
+// Content
+$g-blockquote-small-color:                                      $g-dark !default;
+$g-blockquote-font-size:                                        ($g-font-size-base * 1.25) !default;
+$g-blockquote-font-weight:                                      $g-font-weight-light !default;
+
+
+
+// Card
+// =============================================================
+
+$g-card-cap-bg:                                                 theme-color("light") !default;
+$g-card-border-color:                                           $g-gray-100 !default;
+
+
+
+// Modals
+// =============================================================
+
+// Background Color
+$g-modal-backdrop-bg:                                           $g-dark !default;
+$g-modal-backdrop-opacity:                                      .1 !default;
+
+// Border Color
+$g-modal-content-border-color:                                  $g-gray-100 !default;
+
+// Box Shadow
+$g-modal-content-box-shadow-xs:                                 0 .25rem .6rem rgba(theme-color("dark"), .07) !default;
+$g-modal-content-box-shadow-sm-up:                              0 .5rem 1.625rem rgba(theme-color("dark"), .07) !default;
+
+// Sizes
+$g-modal-lg:                                                    800px !default;
+$g-modal-md:                                                    500px !default;
+$g-modal-sm:                                                    350px !default;
+
+
+
+// Popovers
+// =============================================================
+
+// Background Color
+$g-popover-header-bg:                                           theme-color("light") !default;
+
+// Border Color
+$g-popover-border-color:                                        $g-gray-100 !default;
+
+// Box Shadow
+$g-popover-box-shadow:                                          0 .25rem .6rem rgba(theme-color("dark"), .07) !default;
+
+
+
+// Navbar
+// =============================================================
+
+// Dark Mode Colors
+$g-navbar-dark-color:                                           rgba($g-white, .9) !default;
+$g-navbar-dark-hover-color:                                     $g-white !default;
+
+// Onscroll
+$navbar-bg-onscroll:                                            lighten(theme-color("primary"), 5%) !default;
+
+
+
+// Drop Down
+// =============================================================
+
+// $g-dropdown-link-active-bg:                                     transparent !default;
+$g-dropdown-link-hover-bg:                                      theme-color("light") !default;
+$g-dropdown-border-color:                                       $g-gray-100 !default;
+
+// Dropdown menu container and contents.
+$g-dropdown-min-width:                                          200px !default;
+$g-dropdown-box-shadow:                                         0 .4rem 2.2rem 0 rgba(27,30,36, .1) !default;
+
+
+
+// Nav Tabs
+// =============================================================
+
+// Active Color
+$nav-tabs-link-active-color:                                    $g-dark !default;
+
+// Border Color
+$g-nav-tabs-border-color:                                       $g-gray-100 !default;
+
+
+
+// Carousel
+// =============================================================
+
+$g-carousel-control-color:                                      $g-white !default;
+$g-carousel-control-size:                                       2rem !default;
+
+
+
+// Tooltips
+// =============================================================
+
+$g-tooltip-max-width:                                           200px !default;
+$g-tooltip-color:                                               $g-white !default;
+$g-tooltip-bg:                                                  theme-color("primary") !default;
+$g-tooltip-opacity:                                             1 !default;
+$g-tooltip-padding-y:                                           .5rem !default;
+$g-tooltip-padding-x:                                           1rem !default;

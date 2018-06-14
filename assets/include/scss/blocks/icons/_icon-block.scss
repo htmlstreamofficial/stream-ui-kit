@@ -1,0 +1,23 @@
+/*------------------------------------
+  Icon Block
+------------------------------------*/
+.u-icon-block {
+  &__col {
+    padding:{
+      top: map-get($g-spacers, 9);
+      bottom: map-get($g-spacers, 9);
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .u-icon-block {
+    border-bottom: solid 1px $g-hr-color;
+
+    &__col {
+      &--left-brd {
+        border-left: solid 1px $g-hr-color;
+      }
+    }
+  }
+}

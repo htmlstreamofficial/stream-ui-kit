@@ -1,0 +1,34 @@
+/*----------------------------------
+  Header
+------------------------------------*/
+// Navbar Background Color (fixed mode)
+.navbar-expand-sm.fixed-top {
+  // Small Devices
+  @include media-breakpoint-down(sm) {
+    background-color: rgba($g-dark, .3);
+  }
+}
+
+.navbar-expand-md.fixed-top {
+  // Medium Devices
+  @include media-breakpoint-down(md) {
+    background-color: rgba($g-dark, .3);
+  }
+}
+
+.navbar-expand-lg.fixed-top {
+  // Large Devices
+  @include media-breakpoint-down(lg) {
+    background-color: rgba($g-dark, .3);
+  }
+}
+
+// Navbar Onscroll
+.navbar-bg-onscroll.fixed-top {
+  background-color: $navbar-bg-onscroll;
+  transition: all .3s ease-out;
+
+  &--fade {
+    transition: all .4s ease-out;
+  }
+}

@@ -1,0 +1,40 @@
+/*----------------------------------
+  Blockquote-v2
+------------------------------------*/
+.u-blockquote-v2 {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 5px 6px 9px -6px rgba(0,0,0, .15);
+  @include px-to-rem(padding, 30px 30px 30px 60px);
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    @include px-to-rem(width, 60px);
+    @include px-to-rem(margin, -25px 0 0 -40px);
+    color: $g-primary;
+    @include px-to-rem(font-size, 60px);
+
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    @include px-to-rem(bottom, -30px);
+    @include px-to-rem(left, 60px);
+    display: block;
+    width: 0;
+    height: 0;
+    border: {
+      style: solid;
+      width: 30px 30px 0 0;
+      color: $g-white transparent transparent transparent;
+    }
+    filter: drop-shadow(2px 2px 1px rgba(0,0,0, .1));
+  }
+
+  &__image {
+    @include px-to-rem(width, 60px);
+    @include px-to-rem(height, 60px);
+  }
+}

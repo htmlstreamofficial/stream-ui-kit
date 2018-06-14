@@ -1,0 +1,14 @@
+/*------------------------------------
+  Device (iPad)
+------------------------------------*/
+.u-device {
+  position: relative;
+  width: 85%;
+  z-index: -1;
+  margin-bottom: -10rem;
+
+  &__item {
+    border-radius: 2rem;
+    box-shadow: 10px 15px 55px 15px rgba(140, 152, 164, 0.1);
+  }
+}

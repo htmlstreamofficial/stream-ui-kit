@@ -1,0 +1,22 @@
+/*----------------------------------
+  Background Arrow
+------------------------------------*/
+.u-bg-arrow {
+  &-wrapper {
+    position: relative;
+  }
+
+  &-bottom::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    margin-left: -20px;
+    bottom: -25px;
+    border: {
+      style: solid;
+      width: 25px 20px 0 20px;
+      color: #fff transparent transparent transparent;
+    }
+    z-index: 3;
+  }
+}

@@ -1,0 +1,40 @@
+/*----------------------------------
+  Typography
+------------------------------------*/
+/* Font Family */
+.u-font-accent {
+  font-family: $g-font-accent;
+}
+
+/* Font Size */
+.u-font-size {
+  &-75 {
+    font-size: 75%;
+  }
+
+  &-90 {
+    font-size: 90%;
+  }
+}
+
+/* Letter Spacing */
+.u-letter-spacing {
+  &-xs {
+    letter-spacing: 1px;
+  }
+  &-sm {
+    letter-spacing: 2px;
+  }
+}
+
+/*----------------------------------
+  Others
+------------------------------------*/
+.u-opacity {
+  &-1 {
+    opacity: .1;
+  }
+  &-6 {
+    opacity: .6;
+  }
+}

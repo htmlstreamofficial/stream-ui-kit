@@ -1,0 +1,10 @@
+/*----------------------------------
+  Modals
+------------------------------------*/
+.modal-content {
+  box-shadow: $g-modal-content-box-shadow-xs;
+
+  @include media-breakpoint-up(sm) {
+    box-shadow: $g-modal-content-box-shadow-sm-up;
+  }
+}

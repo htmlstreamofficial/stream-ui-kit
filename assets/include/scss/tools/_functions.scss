@@ -1,0 +1,13 @@
+//
+// Functions
+//
+
+// Converting a px based font-size to rem.
+@function parseInt($hs-n) {
+  @if ($hs-n == !important) {
+    @return !important
+  } @else {
+    $hs-rem-size: $hs-n / 16px;
+    @return #{$hs-rem-size}rem;
+  }
+}

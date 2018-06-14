@@ -1,0 +1,21 @@
+/*----------------------------------
+  Blockquote-v1
+------------------------------------*/
+.blockquote-v1 {
+  padding: $g-blockquote-padding-y $g-blockquote-padding-x;
+  background-color: $g-blockquote-bg;
+  font-size: 1.25rem;
+  font-weight: $g-blockquote-font-weight;
+  border-radius: $g-border-radius;
+  margin-bottom: 1rem;
+
+  // Left Bordered
+  &--left {
+    border-left: solid .25rem $g-blockquote-border-color;
+  }
+
+  // Right Bordered
+  &--right {
+    border-right: solid .25rem $g-blockquote-border-color;
+  }
+}

@@ -1,0 +1,77 @@
+/*------------------------------------
+  Default Styles
+------------------------------------*/
+html {
+  font-size: $g-font-size-base;
+}
+
+body {
+  font: {
+    weight: 400;
+    size: 1rem;
+    family: $g-font-primary;
+  }
+  line-height: 1.6;
+  color: $g-dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
+  text-rendering: optimizelegibility;
+}
+
+a {
+  color: $g-primary;
+
+  &:hover {
+    color: $g-primary;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+p {
+  line-height: 1.8;
+}
+
+figure {
+  margin-bottom: 0;
+}
+
+hr {
+  border-color: $g-gray-100;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+/*------------------------------------
+  Headings
+------------------------------------*/
+.h1, .h2, .h3, .h4, .h5, .h6, .h7,
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.6;
+}
+
+/*------------------------------------
+  Highlight Color
+------------------------------------*/
+::-moz-selection {
+  color: $g-white;
+  background-color: $g-primary;
+}
+::selection {
+  color: $g-white;
+  background-color: $g-primary;
+}
+
+.bg-primary ::-moz-selection {
+  color: $g-primary;
+  background-color: $g-white;
+}
+.bg-primary ::selection {
+  color: $g-primary;
+  background-color: $g-white;
+}

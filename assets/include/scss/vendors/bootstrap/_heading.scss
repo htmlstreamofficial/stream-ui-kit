@@ -1,0 +1,53 @@
+//
+// Displays
+//
+
+.display {
+  // Small Devices
+  @include media-breakpoint-up(sm) {
+    &-sm-1 {
+      font-size: $display1-size;
+    }
+    &-sm-2 {
+      font-size: $display2-size;
+    }
+    &-sm-3 {
+      font-size: $display3-size;
+    }
+    &-sm-4 {
+      font-size: $display4-size;
+    }
+  }
+
+  // Medium Devices
+  @include media-breakpoint-up(md) {
+    &-md-1 {
+      font-size: $display1-size;
+    }
+    &-md-2 {
+      font-size: $display2-size;
+    }
+    &-md-3 {
+      font-size: $display3-size;
+    }
+    &-md-4 {
+      font-size: $display4-size;
+    }
+  }
+
+  // Large Devices
+  @include media-breakpoint-up(lg) {
+    &-lg-1 {
+      font-size: $display1-size;
+    }
+    &-lg-2 {
+      font-size: $display2-size;
+    }
+    &-lg-3 {
+      font-size: $display3-size;
+    }
+    &-lg-4 {
+      font-size: $display4-size;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+/*----------------------------------
+  Alerts
+------------------------------------*/
+/* Alert Icon */
+.alert__icon {
+  @include px-to-rem(font-size, 20px);
+}
+
+/* Alert Close Button */
+.alert__close {
+  padding: 0;
+  line-height: 1.3;
+  opacity: .7;
+  background: none;
+  border: none;
+  cursor: pointer;
+  @include px-to-rem(font-size, 26px);
+  transition: all .3s;
+
+  &--light {
+    color: $g-white;
+  }
+  &--dark {
+    color: $g-dark;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: 0 none;
+    box-shadow: none;
+  }
+}

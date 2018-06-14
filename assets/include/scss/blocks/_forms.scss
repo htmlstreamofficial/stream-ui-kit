@@ -1,0 +1,288 @@
+/*----------------------------------
+  Forms
+------------------------------------*/
+/* Form Lable States */
+.form-label-text {
+  // Success (Valid) State
+  .is-valid & {
+    color: theme-color("success");
+  }
+
+  // Error (Invalid) State
+  .is-invalid & {
+    color: theme-color("danger");
+  }
+
+  // Disabled State
+  .is-disabled & {
+    color: $g-form-label-color-disabled;
+  }
+}
+
+/* Form Pilled Shape */
+.form--pill {
+  border-radius: $g-border-radius-pill;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Forms Icon */
+.form-icon {
+  // Icon Wrapper
+  &-wrapper {
+    position: relative;
+    display: block;
+  }
+
+  // Input Space
+  &-input-left {
+    @include px-to-rem (padding-left, 35px);
+  }
+  &-input-right {
+    @include px-to-rem (padding-right, 35px);
+  }
+
+  // Icon Alignments (e.g. left, right)
+  & {
+    position: absolute;
+    height: 100%;
+    @include px-to-rem (width, 40px);
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
+
+  // Icon Position
+  &__item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $g-form-icon-color;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Form Toggles */
+.form-toggle {
+  position: relative;
+  cursor: pointer;
+
+  // Toggle Item
+  &__item {
+    display: block;
+    padding-left: 1px;
+    padding-right: 1px;
+    cursor: pointer;
+    width: 43px;
+    height: 22px;
+    font: {
+      style: normal;
+      weight: 700;
+      size: 9px;
+    }
+    color: $g-form-toggle-color;
+    border: solid 1px $g-form-toggle-border-color;
+    @include px-to-rem(border-radius, 100px);
+
+    // Toggle Item Tag
+    i {
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+
+      &::before {
+        content: attr(data-uncheck-icon);
+        top: 0;
+        left: 0;
+        width: 100%;
+        line-height: 18px;
+        text-align: right;
+        padding: 2px 7px;
+      }
+
+      &::after {
+        left: 4px;
+        width: 16px;
+        height: 16px;
+        background-color: $g-form-toggle-circle-bg-color;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: left .2s ease;
+      }
+    }
+    // End Toggle Item Tag
+  }
+
+  // Control
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    z-index: -1; // Put the input behind the label so it doesn't overlay text
+    opacity: 0;
+
+    &:checked {
+      & +,
+      & + * {
+        // Toggle Item Tag
+        .form-toggle__item {
+          color: $g-form-toggle-color-checked;
+          background-color: $g-form-toggle-bg-color-checked;
+          border-color: $g-form-toggle-border-color-checked;
+          transition: all .3s ease;
+
+          i {
+            &:before {
+              content: attr(data-check-icon);
+              text-align: left;
+            }
+
+            &::after {
+              left: calc(100% - 19px);
+              background-color: $g-form-toggle-circle-bg-color-checked;
+            }
+          }
+        }
+        // End Toggle Item Tag
+      }
+    }
+  }
+
+  // Success (Valid) State
+  .is-valid & {
+    // Icon
+    &__item {
+      color: theme-color("success");
+      border: solid 1px theme-color("success");
+
+      // Icon Tag
+      i {
+        &::after {
+          background-color: theme-color("success");
+        }
+      }
+      // End Icon Tag
+    }
+
+    // Control
+    input[type="checkbox"],
+    input[type="radio"] {
+      &:checked {
+        & +,
+        & + * {
+          // Toggle Item Tag
+          .form-toggle__item {
+            background-color: theme-color("success");
+            border-color: theme-color("success");
+          }
+          // End Toggle Item Tag
+        }
+      }
+    }
+    // End Control
+  }
+
+  // Error (Invalid) State
+  .is-invalid & {
+    // Icon
+    &__item {
+      color: theme-color("danger");
+      border: solid 1px theme-color("danger");
+
+      // Icon Tag
+      i {
+        &::after {
+          background-color: theme-color("danger");
+        }
+      }
+      // End Icon Tag
+    }
+
+    // Control
+    input[type="checkbox"],
+    input[type="radio"] {
+      &:checked {
+        & +,
+        & + * {
+          // Toggle Item Tag
+          .form-toggle__item {
+            background-color: theme-color("danger");
+            border-color: theme-color("danger");
+          }
+          // End Toggle Item Tag
+        }
+      }
+    }
+    // End Control
+  }
+
+  // Disabled State
+  .is-disabled & {
+    // Icon
+    &__item {
+      color: $g-form-toggle-color-disabled;
+      border: solid 1px $g-form-toggle-border-color-disabled;
+
+      // Icon Tag
+      i {
+        &::after {
+          background-color: $g-form-toggle-circle-bg-color-disabled;
+        }
+      }
+      // End Icon Tag
+    }
+
+    // Control
+    input[type="checkbox"],
+    input[type="radio"] {
+      &:checked {
+        & +,
+        & + * {
+          // Toggle Item Tag
+          .form-toggle__item {
+            background-color: $g-form-toggle-bg-color-disabled-checked;
+            border-color: $g-form-toggle-border-color-disabled-checked;
+          }
+          // End Toggle Item Tag
+        }
+      }
+    }
+    // End Control
+  }
+}
+
+/* Bootstrap's Custom Controls */
+.custom-control-input {
+  // Success (Valid) State
+  &.is-valid:checked {
+    ~ .custom-control-label {
+      &::before {
+        background-color: theme-color("success");
+      }
+    }
+  }
+
+  // Error (Invalid) State
+  &.is-invalid:checked {
+    ~ .custom-control-label {
+      &::before {
+        background-color: theme-color("danger");
+      }
+    }
+  }
+
+  &:disabled:checked {
+    ~ .custom-control-label {
+      &::before {
+        background-color: $g-custom-control-indicator-disabled-bg;
+      }
+    }
+  }
+}

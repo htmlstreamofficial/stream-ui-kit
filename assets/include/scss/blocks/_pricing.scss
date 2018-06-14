@@ -1,0 +1,40 @@
+/*------------------------------------
+  Pricing
+------------------------------------*/
+.u-pricing {
+	background-color: $g-white;
+
+	&__header {
+		position: relative;
+		padding: map-get($g-spacers, 6) map-get($g-spacers, 4);
+
+		&-price {
+			display: block;
+			line-height: .84;
+		}
+
+		&-title {
+			opacity: .8;
+		}
+
+		&-decoration {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	&__content {
+		padding: map-get($g-spacers, 4);
+
+		.disabled .u-icon {
+			color: $g-light-primary-200;
+			background-color: rgba($g-light-primary-200, .1);
+		}
+	}
+
+	.disabled {
+		color: $g-light-primary-200;
+	}
+}

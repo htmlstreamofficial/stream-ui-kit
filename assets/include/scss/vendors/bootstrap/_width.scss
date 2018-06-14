@@ -1,0 +1,60 @@
+/*------------------------------------
+  Width
+------------------------------------*/
+.w {
+	// Medium Devices
+	@include media-breakpoint-up(md) {
+		&-md-25 {
+			width: 25% !important;
+		}
+	}
+
+	// Large Devices
+	@include media-breakpoint-up(lg) {
+		&-lg-25 {
+			width: 25% !important;
+		}
+	}
+
+	// Medium Devices
+	@include media-breakpoint-up(md) {
+		&-md-50 {
+			width: 50% !important;
+		}
+	}
+
+	// Large Devices
+	@include media-breakpoint-up(lg) {
+		&-lg-50 {
+			width: 50% !important;
+		}
+	}
+
+	// Medium Devices
+	@include media-breakpoint-up(md) {
+		&-md-75 {
+			width: 75% !important;
+		}
+	}
+
+	// Large Devices
+	@include media-breakpoint-up(lg) {
+		&-lg-75 {
+			width: 75% !important;
+		}
+	}
+
+	// Medium Devices
+	@include media-breakpoint-up(md) {
+		&-md-100 {
+			width: 100% !important;
+		}
+	}
+
+	// Large Devices
+	@include media-breakpoint-up(lg) {
+		&-lg-100 {
+			width: 100% !important;
+		}
+	}
+}

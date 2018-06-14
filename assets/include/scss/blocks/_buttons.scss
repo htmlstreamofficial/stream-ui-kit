@@ -1,0 +1,63 @@
+/*----------------------------------
+  Buttons
+------------------------------------*/
+.btn {
+  cursor: pointer;
+  transition: .2s ease;
+
+  &.focus,
+  &:focus
+  &.active:focus,
+  &:active:focus {
+    outline: 0 none;
+    box-shadow: none;
+    border-color: transparent;
+  }
+}
+
+// Circle
+.btn--circle {
+  border-radius: 100%;
+  padding: 0;
+  @include px-to-rem(width, 42px);
+  @include px-to-rem(height, 42px);
+  @include px-to-rem(line-height, 42px);
+
+  &.btn-sm {
+    @include px-to-rem(width, 31px);
+    @include px-to-rem(height, 31px);
+    @include px-to-rem(line-height, 31px);
+  }
+
+  &.btn-lg {
+    @include px-to-rem(width, 52px);
+    @include px-to-rem(height, 52px);
+    @include px-to-rem(line-height, 52px);
+  }
+}
+
+// Pilled
+.btn--pill {
+  border-radius: $g-border-radius-pill;
+  @include px-to-rem(padding-left, 20px);
+  @include px-to-rem(padding-right, 20px);
+
+  &.btn-sm {
+    @include px-to-rem(padding-left, 15px);
+    @include px-to-rem(padding-right, 15px);
+  }
+
+  &.btn-lg {
+    @include px-to-rem(padding-left, 25px);
+    @include px-to-rem(padding-right, 25px);
+  }
+}
+
+// Link
+.btn-link {
+  color: theme-color("primary");
+
+  &:hover {
+    color: theme-color("primary");
+  }
+}

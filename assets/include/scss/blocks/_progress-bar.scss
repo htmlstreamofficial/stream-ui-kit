@@ -1,0 +1,20 @@
+/*----------------------------------
+  Progress Bars
+------------------------------------*/
+// Pill
+.progress--pill {
+  border-radius: $g-border-radius-pill;
+}
+
+// Column
+.u-progress-bar-vertical {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  background-color: $g-light-primary-100;
+  height: 200px;
+
+  &__indicator {
+    background-color: $g-primary;
+  }
+}

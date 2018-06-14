@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilt</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/demo/css/tilt.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="[ c-example__tilt ] js-tilt" data-tilt-axis="x" data-tilt-glare="true" data-tilt-perspective="1000" data-tilt-scale="1" data-tilt-speed="400" data-tilt-max="10">
+        <div class="c-example__tilt-inner"></div>
+    </div>
+<script src="./../node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="./../dest/tilt.jquery.js"></script>
+<script>
+    const tilt = $('.js-tilt').tilt();
+
+    $('.js-destroy').on('click', function () {
+        const element = $(this).closest('.js-parent').find('.js-tilt');
+        element.tilt.destroy.call(element);
+    });
+
+    $('.js-getvalue').on('click', function () {
+        const element = $(this).closest('.js-parent').find('.js-tilt');
+        const test = element.tilt.getValues.call(element);
+        console.log(test[0]);
+    });
+
+    $('.js-reset').on('click', function () {
+        const element = $(this).closest('.js-parent').find('.js-tilt');
+        element.tilt.reset.call(element);
+    });
+
+    /*tilt.on('change', function (e, transforms) {
+     console.log(transforms);
+     });
+
+     tilt.on('tilt.mouseLeave', function (e) {
+     console.log(e);
+     });
+
+     tilt.on('tilt.mouseEnter', function (e) {
+     console.log(e);
+     });*/
+</script>
+</body>
+</html>
