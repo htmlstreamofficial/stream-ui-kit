@@ -74,7 +74,7 @@ Our soical network profiles:
 
 ### Credits
 
-First, let us take this opportunity to thank all the creative minds for their great products and hard work. All used third party libraries are located in `assets/vendor/..` and image `sources in assets/img-temp/..`
+First, let us take this opportunity to thank all the creative minds for their great products and hard work. All used third party libraries are located in `assets/vendor/..` and image sources in `assets/img-temp/..`
 
 Name | URL
 ------------ | -------------
