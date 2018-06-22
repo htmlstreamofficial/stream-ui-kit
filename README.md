@@ -72,6 +72,29 @@ Our soical network profiles:
 - [Instagram](https://www.instagram.com/htmlstream/)
 
 
+### Credits
+
+First, let us take this opportunity to thank all the creative minds for their great products and hard work. All used third party libraries are located in `assets/vendor/..` and image `sources in assets/img-temp/..`
+
+Name | URL
+------------ | -------------
+Bootstrap | https://getbootstrap.com
+jQuery | http://jquery.com
+Font Awesome | https://fontawesome.com
+Slick Carousel | http://kenwheeler.github.io/slick
+jQuery Parallax | https://ianlunn.co.uk/plugins/jquery-parallax
+Typed.js | https://mattboldt.com/demos/typed-js
+Counter-Up | https://github.com/bfintal/Counter-Up
+Magnific Popup | http://dimsemenov.com/plugins/magnific-popup
+Shuffle | https://vestride.github.io/Shuffle
+
+
+#### Fonts & Images
+
+- Google Fonts: http://www.google.com/fonts
+- Unsplash Beautiful free photos: http://unsplash.com
+
+
 ### Licensed under MIT
 
 Stream UI Kit is Open Source project and licensed under MIT for better Web.
