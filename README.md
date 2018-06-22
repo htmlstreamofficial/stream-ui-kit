@@ -55,7 +55,7 @@ We have created 5 beautiful complete pages with over 20 reusable and customizabl
 - Starter Template
 
 
-### [Online Documentation](https://htmlstream.com/preview/stream-ui-kit/docs.html)
+### Online Documentation
 
 Stream UI Kit comes with detailed documentation to quick start. In addition, the documentation includes credits for images, icons and libraries. Here is a link to [online documentation](https://htmlstream.com/preview/stream-ui-kit/docs.html)
 
