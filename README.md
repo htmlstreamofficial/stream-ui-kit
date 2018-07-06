@@ -99,5 +99,3 @@ Shuffle | https://vestride.github.io/Shuffle
 Stream UI Kit is Open Source project and licensed under MIT for better Web.
 
 ![MIT License](https://img.shields.io/cocoapods/l/AFNetworking.svg?style=for-the-badge)
-
-
